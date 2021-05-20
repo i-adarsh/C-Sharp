@@ -4,7 +4,6 @@ public class Person{
     private String firstName;
     private String lastName;
     private DateTime dob;
-    private String group;
 
     public String FirstName{
         set{firstName = value;}
@@ -28,12 +27,12 @@ public class Person{
         return age;
     }
     public String Adult{
-        get { return group;}
-        set{ if (Convert.ToInt32(value) > 18){
-            group = "Adult";
+        // get { return group;}
+        get{ if (GetAge(dob) > 18){
+            return "Adult";
             }
             else{
-            group = "Child";
+            return "Child";
             } 
             }
     }
@@ -59,7 +58,7 @@ public class Program{
         person.FirstName = firstName;
         person.LastName = lastName;
         person.Dob = dob;
-        person.Adult = person.GetAge(dob);
+        // person.Adult = person.GetAge(dob).ToString();
         person.DisplayDetails();
     }
 }

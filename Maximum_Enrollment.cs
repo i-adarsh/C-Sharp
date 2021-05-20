@@ -11,12 +11,12 @@ namespace Sonu{
             Console.Write("Enter students placed in MET : ");
             int met = Convert.ToInt32(Console.ReadLine());
 
-            int max = Math.max(Math.max(cs, mech), met);
+            int max = Math.Max(Math.Max(cs, mech), met);
             if (max == cs){
                 Console.WriteLine("Highest placement CS");
             }
             if (max == mech){
-                Console.WriteLine("Highest placement MECH")
+                Console.WriteLine("Highest placement MECH");
             }
             if (max == met){
                 Console.WriteLine("Highest placement MET");

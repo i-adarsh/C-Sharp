@@ -4,7 +4,7 @@ public class CalculatorProgram{
     public int Addition (int a, int b){
         return (a + b);
     }
-    public int Substraction (int a, int b){
+    public int Subtraction (int a, int b){
         return (a - b);
     }
     public int Multiplication (int a, int b){
@@ -31,7 +31,7 @@ public class Program{
             Console.WriteLine("Result of {0} {1} {2} is {3}", a, choice, b, calculate.Multiplication(a,b));
         }
         else if (choice == '-'){
-            Console.WriteLine("Result of {0} {1} {2} is {3}", a, choice, b, calculate.Substraction(a,b));
+            Console.WriteLine("Result of {0} {1} {2} is {3}", a, choice, b, calculate.Subtraction(a,b));
         }
         else if (choice == '/'){
             Console.WriteLine("Result of {0} {1} {2} is {3}", a, choice, b, calculate.Division(a,b, out double remainder));

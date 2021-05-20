@@ -4,6 +4,7 @@ public class Person{
     private String firstName;
     private String lastName;
     private DateTime dob;
+    private String group;
 
     public String FirstName{
         set{firstName = value;}
@@ -26,13 +27,14 @@ public class Person{
         }
         return age;
     }
-    public String Adult(){
-        int age = GetAge(dob);
-        if (age > 18){
-            return "Adult";
+    public String Adult{
+        get { return group;}
+        set{ if (Convert.ToInt32(value) > 18){
+            group = "Adult";
             }
             else{
-            return "Child";
+            group = "Child";
+            } 
             }
     }
 
@@ -40,13 +42,13 @@ public class Person{
         Console.WriteLine("First Name: {0}", firstName);
         Console.WriteLine("Last Name: {0}", lastName);
         Console.WriteLine("Age: {0}", GetAge(dob));
-        Console.WriteLine(Adult());
+        Console.WriteLine(Adult);
     }
     
 }
 
 public class Program{
-    public static void Main(){
+    public static void Main(String [] args){
         Console.WriteLine("Enter first name");
         string firstName = Console.ReadLine();
         Console.WriteLine("Enter last name");
@@ -57,6 +59,7 @@ public class Program{
         person.FirstName = firstName;
         person.LastName = lastName;
         person.Dob = dob;
+        person.Adult = person.GetAge(dob);
         person.DisplayDetails();
     }
 }

@@ -22,6 +22,7 @@ public class Account{
                 return balance;
             }
         }
+        set{balance = value;}
     }
     public bool WithDraw (double amount){
         if (balance > amount){

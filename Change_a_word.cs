@@ -1,6 +1,6 @@
 using System;
 
-namespace Sonu{
+// namespace Sonu{
     public class Adarsh{
         public static void Main(){
             Console.WriteLine("Enter a string");
@@ -21,4 +21,4 @@ namespace Sonu{
             }
         }
     }
-}
+// }

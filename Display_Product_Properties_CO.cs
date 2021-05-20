@@ -3,7 +3,7 @@ using System;
 namespace Sonu{
     public class Product{
         private int productId;
-        private String productName;
+        private string productName;
         private double price;
 
         public int ProductId{

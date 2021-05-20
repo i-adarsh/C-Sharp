@@ -26,7 +26,6 @@ namespace Sonu{
                     Console.Write("|");
                     Console.WriteLine();
                 }
-                
             }
         }
     }

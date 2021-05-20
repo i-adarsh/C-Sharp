@@ -14,11 +14,16 @@ public class Account{
         get { return accountType;}
     }
     public double Balance{
-        if (balance < 0){
-            balance = 0;
+        get {
+            if (balance < 0){
+                return 0;
+            }
+            else{
+                return balance;
+            }
         }
     }
-    public boolean WithDraw (double amount){
+    public bool WithDraw (double amount){
         if (balance > amount){
             balance -= amount;
             return true;

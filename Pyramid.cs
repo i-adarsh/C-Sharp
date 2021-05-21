@@ -18,12 +18,11 @@ public class Adarsh{
             for (int space = 1; space <= rows - i; ++space) {
                 Console.Write("  ");
             }
-
-        while (k != 2 * i - 1) {
-        Console.Write(alphabet + " ");
-        ++k;
+            while (k != 2 * i - 1) {
+            Console.Write(alphabet + " ");
+            ++k;
+            }
+            Console.WriteLine();
         }
-        Console.WriteLine();
-    }
     }
 }

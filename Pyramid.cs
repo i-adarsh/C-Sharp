@@ -6,6 +6,13 @@ public class Adarsh{
         char alphabet = Console.ReadLine()[0];
         Console.WriteLine("Enter number of repeats :");
         int rows = Convert.ToInt32(Console.ReadLine());
+        int count = 1;
+        int num = 1;
+        while(num != rows){
+            num += 2;
+            count++;
+        }
+        rows = count;
         int k = 0;
         for (int i = 1; i <= rows; ++i, k = 0) {
             for (int space = 1; space <= rows - i; ++space) {

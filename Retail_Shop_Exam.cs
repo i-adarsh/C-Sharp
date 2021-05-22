@@ -28,25 +28,25 @@ public class Program{
             }
         }
         if (count == 0){
-            return "Product is NotAvailable at" + shopObj.ShopName + ", " + shopObj.ShopAddress
+            return "Product is Not Available at " + shopObj.ShopName + ", " + shopObj.ShopAddress;
         }
         else{
-            return "Product is Available at " + shopObj.ShopName + ", " + shopObj.ShopAddress
+            return "Product is Available at " + shopObj.ShopName + ", " + shopObj.ShopAddress;
         }
     }
 
     public static void Main(){
-        Console.WriteLine("Enter the Shop Name:")
+        Console.WriteLine("Enter the Shop Name:");
         string name = Console.ReadLine();
         Console.WriteLine("Enter the Address:");
         string add = Console.ReadLine();
-        Console.WriteLine("Enter number of products:")
+        Console.WriteLine("Enter number of products:");
         int n = Convert.ToInt32(Console.ReadLine());
         string [] product = new string[n];
         for (int i = 0; i <n; i++){
             product[i] = Console.ReadLine();
         }
-        Console.WriteLine("Enter the product to be searched:")
+        Console.WriteLine("Enter the product to be searched:");
         string search = Console.ReadLine();
         Shop shop = new Shop();
         shop.ShopName = name;

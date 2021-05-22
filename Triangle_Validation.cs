@@ -19,13 +19,17 @@ public class Program{
         String valid = Validate(side1, side2, side3);
         if (valid == "Valid"){
             if ((side1 + side2) > side3){
-                Console.WriteLine("Sides form a Triangle");
-            }
-            else if((side1 + side3) > side2){
-                Console.WriteLine("Sides form a Triangle");
-            }
-            else if((side2 + side3) > side1){
-                Console.WriteLine("Sides form a Triangle");
+                if((side1 + side3) > side2){
+                    if((side2 + side3) > side1){
+                        Console.WriteLine("Sides form a Triangle");
+                    }
+                    else{
+                        Console.WriteLine("Sides does not form a Triangle");
+                    }
+                }
+                else{
+                    Console.WriteLine("Sides does not form a Triangle");
+                }
             }
             else{
                 Console.WriteLine("Sides does not form a Triangle");
